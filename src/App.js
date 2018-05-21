@@ -1,37 +1,40 @@
 import React, { Component } from 'react';
-import { Slider } from './Slider/Slider';
+import { Slide } from './Slide/Slide';
 
-const Card = (props) => (
-    <h3>{props.title}</h3>
-)
+const Card = (props) => {
+    // console.log('test', props);
+    return (
+        <h3>{props.title}</h3>
+    )
+}
 
 class App extends Component {
-  render() {
-    return (
-      <div className="App">
-        <Slider
-          style={{
+    render() {
+        const sliderStyle = {
             height: 200,
             width: 200
-          }}
-          cardComponent={Card}
-          slideData={[
-            {
-              id: '0',
-              title: 'first card'
-            },
-            {
-              id: '1',
-              title: 'second card'
-            }
-          ]}
-          hasControlButton={true}
-          hasInidicator={true}
-        >
-        </Slider>
-      </div>
-    );
-  }
+        };
+
+        const slideData = [{
+            id: '0',
+            title: 'first card'
+        }, {
+            id: '1',
+            title: 'second card'
+        }]
+
+        return (
+            <div className="App">
+                <Slide
+                    style={sliderStyle}
+                    slideData={slideData}
+                    card={Card}
+                    hasControlButton={true}
+                    hasInidicator={true}>
+                </Slide>
+            </div>
+        );
+    }
 }
 
 export default App;
