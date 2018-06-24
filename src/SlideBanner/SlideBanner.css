@@ -1,0 +1,74 @@
+.slide-banner,
+.slide-banner * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.slide-banner {
+    overflow: hidden;
+    position: relative;
+}
+
+.slide-banner__card-list {
+    background: orange;
+}
+
+.slide-banner__card {
+    float: left;
+    height: 100%;
+}
+
+.slide-banner__ctrl {
+    position: absolute;
+    left: 0;
+    top: 40%;
+    width: 100%;
+    padding: 0 10px;
+}
+
+.slide-banner__btn {
+    border: none;
+    background: none;
+    font-size: 20px;
+}
+
+.slide-banner__btn:focus {
+    outline: none;
+}
+
+.slide-banner__btn--left {
+    float: left;
+}
+
+.slide-banner__btn--right {
+    float: right;
+}
+
+.slide-banner__indicator {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    text-align: center;
+    width: 100%;
+}
+
+.slide-banner__indicator-bullet {
+    width: 10px;
+    height: 10px;
+    background: rgba(0,0,0, 0.5);
+    border-radius: 100%;
+}
+
+.slide-banner__indicator-bullet{
+    display: inline-block;
+    margin-left: 5px;
+}
+
+.slide-banner__indicator-bullet:first-child {
+    margin-left: 0;
+}
+
+.slide-banner__indicator-bullet--active {
+    background: rgba(255, 255, 255, 0.8);
+}

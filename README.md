@@ -1,1 +1,3 @@
-## 슬라이드 React 컴포넌트
+## react-blocks
+
+A collection of the React components I created.
