@@ -15,6 +15,10 @@ export default class SlideBanner extends React.Component {
 
         this.state = {
             currentIndex: 0,
+            cardStyle: {
+                height: viewPortHeight,
+                width: viewPortWidth
+            },
             cardListStyle: {
                 height: viewPortHeight,
                 width: viewPortWidth * this.props.children.length,
@@ -35,7 +39,7 @@ export default class SlideBanner extends React.Component {
         }
 
         const nextIndex = this.state.currentIndex - 1;
-        const nextPosX = -nextIndex * this.state.cardListStyle.width;
+        const nextPosX = -nextIndex * this.state.cardStyle.width;
 
         this.setState({
             currentIndex: nextIndex,
@@ -53,7 +57,7 @@ export default class SlideBanner extends React.Component {
         }
 
         const nextIndex = this.state.currentIndex + 1;
-        const nextPosX = -nextIndex * this.state.cardListStyle.width;
+        const nextPosX = -nextIndex * this.state.cardStyle.width;
 
         this.setState({
             currentIndex: nextIndex,
@@ -71,7 +75,7 @@ export default class SlideBanner extends React.Component {
                     className="slide-banner__card" 
                     key={'slide-card-'+(card.key)} 
                     style={{
-                        width: this.state.cardListStyle.width
+                        width: this.state.cardStyle.width
                     }}>
                     {card}
                 </div>
@@ -81,8 +85,8 @@ export default class SlideBanner extends React.Component {
         return (
             <div className="slide-banner"
                  style={{
-                     width: this.state.cardListStyle.width,
-                     height: this.state.cardListStyle.height
+                     width: this.state.cardStyle.width,
+                     height: this.state.cardStyle.height
                  }}>
                 <div 
                     className="slide-banner__card-list"
