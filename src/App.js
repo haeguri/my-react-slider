@@ -41,7 +41,7 @@ class App extends Component {
                         })
                     }
                 </SlideBanner>
-                {/* <SlideBanner
+                <SlideBanner
                     controls={slideControls}
                     showIndicator={true}>
                     {
@@ -53,7 +53,7 @@ class App extends Component {
                             );
                         })
                     }
-                </SlideBanner> */}
+                </SlideBanner>
             </div>
         );
     }
