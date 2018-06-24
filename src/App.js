@@ -54,6 +54,34 @@ class App extends Component {
                         })
                     }
                 </SlideBanner>
+
+                <SlideBanner
+                    controls={slideControls}
+                    showIndicator={true}>
+                    {
+                        bannerRawDatas.map((data) => {
+                            return (
+                                <div key={data.id}>
+                                    <img className="food-img" src={data.img} alt="food"/>
+                                </div>
+                            );
+                        })
+                    }
+                </SlideBanner>
+
+                <SlideBanner
+                    controls={slideControls}
+                    showIndicator={true}>
+                    {
+                        bannerRawDatas.map((data) => {
+                            return (
+                                <div key={data.id}>
+                                    <img className="food-img" src={data.img} alt="food"/>
+                                </div>
+                            );
+                        })
+                    }
+                </SlideBanner>
             </div>
         );
     }

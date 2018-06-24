@@ -6,12 +6,14 @@ export default class ShrinkHeader extends React.Component {
         super(props);
     }
 
-    render(){
+    render() {
         const className = this.props.className + ' header--shrink';
 
         return (
-            <div className={className} 
-                 style={{height:this.props.height}}>
+            <div className={className}
+                 style={{
+                     height:this.props.height
+                }}>
                 {this.props.children}
             </div>
         );
